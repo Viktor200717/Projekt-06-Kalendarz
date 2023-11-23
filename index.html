@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 10px;
+    }
+
+    .day {
+      position: relative;
+      padding: 50px;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .day:hover {
+      background-color: #e6e6e6;
+    }
+
+    .day.active {
+      background-color: #ffcc00;
+    }
+
+    .day video {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calendar">
+
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">1</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">2</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">3</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">4</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">5</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">6</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">7</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">8</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">9</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">10</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">11</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">12</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">13</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">14</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">15</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">16</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">17</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">18</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">19</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">20</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">21</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">22</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">23</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+  <div class="day" onclick="toggleVideo(this)">
+    <div class="day-number">24</div>
+    <video src="c:\Users\Uczen\Desktop\Kalendarz adwentowy\Wham! - Last Christmas (Official Video).mp4" loop></video>
+  </div>
+
+</div>
+
+<script>
+  function toggleVideo(dayElement) {
+    // Hide all videos
+    document.querySelectorAll('.day video').forEach(video => video.style.display = 'none');
+
+    // Toggle active class
+    dayElement.classList.toggle('active');
+
+    // If the day is active, show its video
+    if (dayElement.classList.contains('active')) {
+      const video = dayElement.querySelector('video');
+      if (video) {
+        video.style.display = 'block';
+        video.play();
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
