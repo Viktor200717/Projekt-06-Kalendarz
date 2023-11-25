@@ -153,9 +153,19 @@
 </div>
 
 <script>
+ let currentActiveDay = null;
+
   function toggleVideo(dayElement) {
-    // Hide all videos
-    document.querySelectorAll('.day video').forEach(video => video.style.display = 'none');
+    // If another day is active, hide its video and remove the active class
+    if (currentActiveDay && currentActiveDay !== dayElement) {
+      currentActiveDay.classList.remove('active');
+      const video = currentActiveDay.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+        video.style.display = 'none';
+      }
+    }
 
     // Toggle active class
     dayElement.classList.toggle('active');
@@ -167,7 +177,18 @@
         video.style.display = 'block';
         video.play();
       }
+    } else {
+      // If the day is no longer active, pause and reset the video
+      const video = dayElement.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+        video.style.display = 'none';
+      }
     }
+
+    // Update the current active day
+    currentActiveDay = dayElement;
   }
 </script>
 
