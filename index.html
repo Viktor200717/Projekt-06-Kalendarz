@@ -167,7 +167,7 @@
  let currentActiveDay = null;
 
   function toggleVideo(dayElement) {
-    // If another day is active, hide its video and remove the active class
+   
     if (currentActiveDay && currentActiveDay !== dayElement) {
       currentActiveDay.classList.remove('active');
       const video = currentActiveDay.querySelector('video');
@@ -178,10 +178,10 @@
       }
     }
 
-    // Toggle active class
+    
     dayElement.classList.toggle('active');
 
-    // If the day is active, show its video
+    
     if (dayElement.classList.contains('active')) {
       const video = dayElement.querySelector('video');
       if (video) {
@@ -189,7 +189,7 @@
         video.play();
       }
     } else {
-      // If the day is no longer active, pause and reset the video
+     
       const video = dayElement.querySelector('video');
       if (video) {
         video.pause();
@@ -198,7 +198,6 @@
       }
     }
 
-    // Update the current active day
     currentActiveDay = dayElement;
   }
 </script>
