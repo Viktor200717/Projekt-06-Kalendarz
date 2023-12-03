@@ -4,43 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-  font-family: 'Arial', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
-      background-color: #87CEFA; 
-      color: #fff;
-    }
-    
-    h1 {
-      margin-bottom: 20px;
-      font-size: 2em;
-      background: linear-gradient(45deg, #ffcc00, #87CEFA); /* Gradient z żółtego do jasnoniebieskiego */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: colorShift 5s infinite alternate; /* Animacja zmiany kolorów */
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    @keyframes colorShift {
-      0% {
-        background-position: 100% 0%;
-      }
-      100% {
-        background-position: 0% 100%;
-      }
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .calendar {
+    .container p a {
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    .container p a:hover {
+      color: #2980b9;
+    }
+
+    .container .calendar {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 10px;
     }
-
-    .day {
+    .container .day {
       position: relative;
-      padding: 50px;
+      padding: 20px;
       background-color: #ADD8E6; 
       border: 2px solid #fff; 
       cursor: pointer;
@@ -48,15 +41,15 @@
       box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
     }
 
-    .day:hover {
-      background-color: #B0C4DE; 
+    .container .day:hover {
+      background-color: #B0C4DE;
     }
 
-    .day.active {
+    .container .day.active {
       background-color: #ffcc00;
     }
 
-    .day video {
+    .container .day video {
       display: none;
       width: 100%;
       height: 100%;
@@ -68,22 +61,28 @@
       border-radius: 4px;
     }
 
-    .day .day-number {
+    .container .day .day-number {
       position: absolute;
       top: 10px;
       left: 10px;
       font-size: 1.2em;
       color: #fff; 
     }
+    .container .day:hover {
+      background-color: #B0C4DE; 
+
+    .container .author-info {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 0.8em;
+    }
   </style>
 </head>
 <body>
 <h1>Fetisov Viktor</h1>
- <div class="conteiner">
-    <p> <a href="Untitled-1.html"> My ptojekt</a> </p><div width="100%" height="100% class=" container"="">
-    </div><table border="1">
-        
-        </table> </div> 
+<div class="container">
+  <p> Projekt 03 - grafika </p> 
 <div class="calendar">
 
   <div class="day" onclick="toggleVideo(this)">
@@ -182,7 +181,9 @@
     <div class="day-number">24</div>
     <video src="Santa Claus Is Coming to Town.mp4" loop></video>
   </div>
-
+<div class="author-info">
+    Author: Imię Nazwisko
+  </div>
 </div>
 <script src="https://storage.yandexcloud.net/slaylines/uploads/snowflakes.min.1.0.0.js" defer></script>
 <script>
