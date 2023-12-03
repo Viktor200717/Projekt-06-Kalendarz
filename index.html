@@ -14,7 +14,24 @@
       background-color: #87CEFA; 
       color: #fff;
     }
+    
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      background: linear-gradient(45deg, #ffcc00, #87CEFA); /* Gradient z żółtego do jasnoniebieskiego */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: colorShift 5s infinite alternate; /* Animacja zmiany kolorów */
+    }
 
+    @keyframes colorShift {
+      0% {
+        background-position: 100% 0%;
+      }
+      100% {
+        background-position: 0% 100%;
+      }
+    }
     .calendar {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
