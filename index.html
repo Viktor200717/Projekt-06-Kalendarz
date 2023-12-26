@@ -21,22 +21,12 @@
       -webkit-text-fill-color: transparent;
       animation: colorShift 5s infinite alternate; 
     }
-
-    @keyframes colorShift {
-      0% {
-        background-position: 100% 0%;
-      }
-      100% {
-        background-position: 0% 100%;
-      }
-    }
-
-    .calendar {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 10px;
-    }
-
+.calendar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+}
     .day {
       position: relative;
       padding: 20px;
