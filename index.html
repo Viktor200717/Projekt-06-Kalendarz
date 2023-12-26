@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
+<style>
     body {
       font-family: 'Arial', sans-serif;
       background-color: #87CEFA;
@@ -33,21 +33,25 @@
 
     .calendar {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-wrap: nowrap; /* Ustawienie, aby elementy nie zawijały się do nowej linii */
+      overflow-x: auto; /* Dodanie przewijania poziomego, jeśli elementy nie mieszczą się na ekranie */
       padding: 20px;
     }
 
     .day {
       position: relative;
-      width: calc(16.66% - 20px); /* 100% / 6 - margines */
+      width: 100px;
       height: 100px;
-      margin: 10px;
+      margin-right: 10px; /* Dodatkowy margines między dniami */
       background-color: #ADD8E6;
       border: 2px solid #fff;
       cursor: pointer;
       transition: background-color 0.3s;
       box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .day:last-child {
+      margin-right: 0; /* Usunięcie marginesu dla ostatniego dnia */
     }
 
     .day:hover {
